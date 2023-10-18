@@ -12,8 +12,8 @@ using PizzaOrderingSystemAPI.DBContext;
 namespace PizzaOrderingSystemAPI.Migrations
 {
     [DbContext(typeof(PizzaOrderingSystemAPI_DbContext))]
-    [Migration("20231017131215_Inital Migration")]
-    partial class InitalMigration
+    [Migration("20231018060525_Initial Migration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

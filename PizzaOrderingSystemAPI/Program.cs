@@ -11,7 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Accessing the Database connection String 
-builder.Services.AddDbContext<PizzaOrderingSystemAPI_DbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("PizzaOrderingSystemAPIConnectionString")
+builder.Services.AddDbContext<PizzaOrderingSystemAPI_DbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("PizzaOrderingSystemAPIConnectionString")
 ));
 
 var app = builder.Build();
