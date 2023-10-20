@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using PizzaOrderingSystemAPI.DBContext;
+using PizzaOrderingSystemAPI.Repository;
+using PizzaOrderingSystemAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,14 @@ builder.Services.AddSwaggerGen();
 // Accessing the Database connection String 
 builder.Services.AddDbContext<PizzaOrderingSystemAPI_DbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("PizzaOrderingSystemAPIConnectionString")
 ));
+
+// Register repository and service classes
+builder.Services.AddScoped<CustomerRepository>();
+builder.Services.AddScoped<CustomerService>();
+
+// Register Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
