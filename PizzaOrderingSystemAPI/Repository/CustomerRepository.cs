@@ -60,7 +60,7 @@ namespace PizzaOrderingSystemAPI.Repository
             var cId = _pizzaOrderingDbContext.Customer.Find(customerId);
             if (cId != null)
             {
-                cId.CustomerId = customer.CustomerId;
+               // cId.CustomerId = customer.CustomerId;
                 cId.FirstName = customer.FirstName;
                 cId.LastName = customer.LastName;
                 cId.City = customer.City;

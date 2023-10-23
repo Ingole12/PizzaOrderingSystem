@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using PizzaOrderingSystemAPI.DBContext;
+using PizzaOrderingSystemAPI.Models.DeliveryEmployee;
 using PizzaOrderingSystemAPI.Repository;
 using PizzaOrderingSystemAPI.Services;
 
@@ -20,6 +21,10 @@ builder.Services.AddDbContext<PizzaOrderingSystemAPI_DbContext>(options => optio
 // Register repository and service classes
 builder.Services.AddScoped<CustomerRepository>();
 builder.Services.AddScoped<CustomerService>();
+builder.Services.AddScoped<DeliveryEmployeeRepository>();
+builder.Services.AddScoped<DeliveryEmployeeService>();
+builder.Services.AddScoped<OrderRepository>();
+builder.Services.AddScoped<OrderService>();
 
 // Register Swagger
 builder.Services.AddEndpointsApiExplorer();
