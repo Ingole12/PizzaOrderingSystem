@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using PizzaOrderingSystemAPI.DBContext;
+using PizzaOrderingSystemAPI.Middeleware;
 using PizzaOrderingSystemAPI.Models.DeliveryEmployee;
 using PizzaOrderingSystemAPI.Repository;
 using PizzaOrderingSystemAPI.Services;
@@ -32,6 +33,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseMiddleware<RequestLoggerMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
