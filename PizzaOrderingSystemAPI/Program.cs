@@ -28,6 +28,8 @@ builder.Services.AddScoped<OrderRepository>();
 builder.Services.AddScoped<OrderService>();
 builder.Services.AddScoped<PizzaRepository>();
 builder.Services.AddScoped<PizzaService>();
+
+
 // Register Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PizzaOrderingSystemAPI",
+    "\\PizzaOrderingSystemAPI\\Controllers",
+    "\\PizzaOrderingSystemAPI\\DBContext"
   ],
-  "SelectedNode": "\\C:\\Users\\Rahul\\Practice\\PizzaOrderingSystem",
+  "SelectedNode": "\\PizzaOrderingSystemAPI\\DBContext\\PizzaOrderingSystemAPI_DbContext.cs",
   "PreviewInSolutionExplorer": false
 }
